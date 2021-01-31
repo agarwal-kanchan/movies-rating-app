@@ -51,13 +51,13 @@ class MovieRatingService {
       allUsersTop3Movies.show(false)
       utils.writeDataFrameToFile(movies, path + destDir + "_movies", spark)
 
-      utils.writeDataFrameToFile(ratings, path + destDir + "ratings", spark)
+      utils.writeDataFrameToFile(ratings, path + destDir + "_ratings", spark)
 
       utils.writeDataFrameToFile(users, path + destDir + "_users", spark)
 
       utils.writeDataFrameToFile(movieRatings, path + destDir + "_movieRatings", spark)
 
-      utils.writeDataFrameToFile(allUsersTop3Movies, path + destDir + "usersTop3Movies", spark)
+      utils.writeDataFrameToFile(allUsersTop3Movies, path + destDir + "_usersTop3Movies", spark)
 
     } catch {
       case ex: Exception => {
